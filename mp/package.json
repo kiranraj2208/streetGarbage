@@ -1,0 +1,21 @@
+{
+  "name": "garbage-detection",
+  "version": "1.0.0",
+  "description": "An Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.0"
+  }
+}

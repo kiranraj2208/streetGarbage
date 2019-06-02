@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Garbage Detection</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/tooltip.css">
+	<link rel="stylesheet" href="css/border.css">
+
+</head>
+<body background="background.png">
+	<div id="loading"></div>
+	<div class="outer"> <h1 class="header"> Street Garbage Detection <br> Using <br> Deep Learning Techniques </h1> </div>
+	<div id="drop-area" class="gradient-border">
+
+		<div class="drop-area-item">
+			<p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+		</div>
+
+		<div class="spread">
+			<input
+				type="file"
+				id="fileElem"
+				style="display: none;"
+				multiple
+				accept="image/*"
+				onchange="handleFiles(this.files)"
+			>
+			<label class="button" for="fileElem">UPLOAD</label>
+			<label class="button tooltip disabled" id="detectBtn" onclick="test()" style="">
+				DETECT
+				<span id="tooltip" class="tooltiptext tooltip-right">Upload at least one image</span>
+			</label>
+		</div>
+
+		<div class="drop-area-item">
+			<progress id="progress-bar" class="progressBar" max=100 value=0></progress>
+		</div>
+
+		<div id="gallery" class="gallery"></div>
+	</div>
+	
+	<p id="test"></p>
+
+	<script src="js/fileUpload.js" defer="true"></script>
+</body>
+</html>
+
